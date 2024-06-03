@@ -21,11 +21,12 @@
 </head>
 
 <body>
+  
   <div class="wrapper">
     <div class="content">
       <header class="header">
         <div class="container">
-          <div class="header__inner">
+          <div class="header__inner element-animation">
             <a href="#" class="header__logo">
               <img src="images/dest/icons/logo.svg" alt="logo">
             </a>
@@ -75,14 +76,14 @@
             </a>
             <ul class="header__languege">
               <li class="header__languege-child">
-                <span>UA</span>
+                <span>Ua</span>
                 <div class="header__languege-dropdown-wrap">
                   <ul class="header__languege-dropdown">
                     <li>
-                      <a href="#">UA</a>
+                      <a href="#">Ua</a>
                     </li>
                     <li>
-                      <a href="#">EN</a>
+                      <a href="#">En</a>
                     </li>
                   </ul>
                 </div>
@@ -94,13 +95,17 @@
           </div>
         </div>
       </header>
-
+      
+      <div id="cursor">
+        <div class="cursor--inner"></div>
+      </div>
+      
       <section class="intro">
         <div class="intro__slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-image: url('images/dest/content/intro-1.jpg');">
               <div class="container">
-                <div class="intro__content">
+                <div class="intro__content element-animation">
                   <h2>
                     Fencer gear from fencers for fencers
                   </h2>
@@ -129,7 +134,7 @@
             </div>
             <div class="swiper-slide" style="background-image: url('images/dest/content/intro-1.jpg');">
               <div class="container">
-                <div class="intro__content">
+                <div class="intro__content element-animation">
                   <h2>
                     Fencer gear from fencers for fencers2
                   </h2>
@@ -158,7 +163,7 @@
             </div>
             <div class="swiper-slide" style="background-image: url('images/dest/content/intro-1.jpg');">
               <div class="container">
-                <div class="intro__content">
+                <div class="intro__content element-animation">
                   <h2>
                     Fencer gear from fencers for fencers
                   </h2>
@@ -195,38 +200,38 @@
         </div>
       </section>
 
-      <section class="catalog" style="background-image: url('images/dest/content/catalog-bg.png');">
+      <section class="catalog element-animation" style="background-image: url('images/dest/content/catalog-bg.png');">
         <div class="container">
           <h3 class="title">
             Catalog
           </h3>
           <div class="catalog__slider">
             <div class="swiper-wrapper">
-              <a href="#" class="swiper-slide">
+              <a href="#" class="swiper-slide category-item">
                 <img src="images/dest/content/catalog-1.png" alt="img">
                 <p>
                   Collets
                 </p>
               </a>
-              <a href="#" class="swiper-slide">
+              <a href="#" class="swiper-slide category-item">
                 <img src="images/dest/content/catalog-1.png" alt="img">
                 <p>
                   Collets
                 </p>
               </a>
-              <a href="#" class="swiper-slide">
+              <a href="#" class="swiper-slide category-item">
                 <img src="images/dest/content/catalog-1.png" alt="img">
                 <p>
                   Collets
                 </p>
               </a>
-              <a href="#" class="swiper-slide">
+              <a href="#" class="swiper-slide category-item">
                 <img src="images/dest/content/catalog-1.png" alt="img">
                 <p>
                   Collets
                 </p>
               </a>
-              <a href="#" class="swiper-slide">
+              <a href="#" class="swiper-slide category-item">
                 <img src="images/dest/content/catalog-1.png" alt="img">
                 <p>
                   Collets
@@ -234,10 +239,15 @@
               </a>
             </div>
             <div class="swiper-button-next">
-              <img src="images/dest/icons/arrow-slider-dark.svg" alt="arrow-next">
+              <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#1A1A1A"/>
+                </svg>                
             </div>
             <div class="swiper-button-prev">
-              <img src="images/dest/icons/arrow-slider-dark.svg" alt="arrow-prew">
+              <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#1A1A1A"/>
+                </svg>
+                
             </div>
           </div>
         </div>
@@ -245,7 +255,7 @@
 
       <section class="about">
         <div class="container">
-          <div class="about__inner">
+          <div class="about__inner element-animation">
             <div class="about__img">
               <img src="images/dest/content/about.jpg" alt="img">
             </div>
@@ -283,11 +293,11 @@
 
       <section class="excellence">
         <div class="container">
-          <h3 class="title">
+          <h3 class="title element-animation">
             We are chosen because
           </h3>
           <ul>
-            <li>
+            <li class="element-animation">
               <img src="images/dest/icons/excellence-1.svg" alt="icon">
               <h6>
                 Easy to order
@@ -296,7 +306,7 @@
                 Lorem ipsum dolor sit amet consectetur. Eu nisi vitae
               </p>
             </li>
-            <li>
+            <li class="element-animation">
               <img src="images/dest/icons/excellence-2.svg" alt="icon">
               <h6>
                 Paid
@@ -305,7 +315,7 @@
                 Lorem ipsum dolor sit amet consectetur. Eu nisi vitae
               </p>
             </li>
-            <li>
+            <li class="element-animation">
               <img src="images/dest/icons/excellence-3.svg" alt="icon">
               <h6>
                 Quickly received
@@ -314,7 +324,7 @@
                 Lorem ipsum dolor sit amet consectetur. Eu nisi vitae
               </p>
             </li>
-            <li>
+            <li class="element-animation">
               <img src="images/dest/icons/excellence-1.svg" alt="icon">
               <h6>
                 You are happy
@@ -323,7 +333,7 @@
                 Lorem ipsum dolor sit amet consectetur. Eu nisi vitae
               </p>
             </li>
-            <li>
+            <li class="element-animation">
               <img src="images/dest/icons/excellence-1.svg" alt="icon">
               <h6>
                 You use
@@ -337,7 +347,7 @@
       </section>
 
       <section class="talk">
-        <div class="container">
+        <div class="container element-animation">
           <h3 class="title">
             They talk about us
           </h3>
@@ -485,10 +495,14 @@
               </div>
             </div>
             <div class="swiper-button-next">
-              <img src="images/dest/icons/arrow-slider.svg" alt="arrow-next">
+              <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#fff"/>
+                </svg>                
             </div>
             <div class="swiper-button-prev">
-              <img src="images/dest/icons/arrow-slider.svg" alt="arrow-prew">
+              <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#fff"/>
+                </svg>
             </div>
           </div>
         </div>
@@ -499,7 +513,7 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="container">
-          <div class="footer__inner">
+          <div class="footer__inner element-animation">
             <div class="footer__col">
               <span>Address</span>
               <ul>
@@ -567,6 +581,9 @@
       </div>
     </footer>
   </div>
+
+
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
