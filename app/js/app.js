@@ -132,6 +132,29 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+/*start animation========*/
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+/*end animation========*/
+
+
+
 var swiper = new Swiper(".intro__slider", {
   spaceBetween: 30,
   effect: "fade",
@@ -210,3 +233,30 @@ var swiper = new Swiper(".u-info__slider", {
   },
 
 });
+
+const cursor = document.querySelector('#cursor');
+let mouse = { x: 300, y: 300 };
+let pos = { x: 0, y: 0 };
+const speed = 0.1; // between 0 and 1
+
+const updatePosition = () => {
+  pos.x += (mouse.x - pos.x) * speed;
+  pos.y += (mouse.y - pos.y) * speed;
+  cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+};
+
+const updateCoordinates = e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+}
+
+window.addEventListener('mousemove', updateCoordinates);
+
+function loop() {
+  updatePosition();
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+
+

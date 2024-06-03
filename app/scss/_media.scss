@@ -740,7 +740,9 @@
     margin: 75px 0 80px 0;
   }
 
-
+  .modal {
+    padding: 60px 20px;
+  }
 
 
 
@@ -817,11 +819,13 @@
   .cabinet__order-top {
     margin: 0;
   }
+
   .cabinet__adress-col,
-  .cabinet__adress{
+  .cabinet__adress {
     flex-direction: column;
   }
-  .cabinet__adress-col{
+
+  .cabinet__adress-col {
     margin: 0 0 15px 20px;
   }
 }
