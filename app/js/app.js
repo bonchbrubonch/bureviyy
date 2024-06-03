@@ -43,6 +43,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const headerSearch = document.querySelector(".header__search");
+  const headerSearchInput = headerSearch.querySelector("input");
+  const headerSearchResalt = document.querySelector(".header__search-resalt");
+
+  document.addEventListener("click", function(event) {
+    if (!headerSearch.contains(event.target) && !headerSearchResalt.contains(event.target)) {
+      headerSearch.classList.remove("active");
+    }
+  });
+  headerSearch.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+  headerSearchResalt.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+});
+
+
 /*кнопка показати більше на головній сторінці*/
 document.addEventListener("DOMContentLoaded", function () {
   const showButtons = document.querySelectorAll(".talk__show");
@@ -167,6 +186,10 @@ var swiper = new Swiper(".intro__slider", {
 var swiper = new Swiper(".catalog__slider", {
   spaceBetween: 30,
   slidesPerView: 1,
+  // autoplay: {
+  //   delay: 7000,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -234,6 +257,8 @@ var swiper = new Swiper(".u-info__slider", {
 
 });
 
+
+/*стилізація тіні курсора*/
 const cursor = document.querySelector('#cursor');
 let mouse = { x: 300, y: 300 };
 let pos = { x: 0, y: 0 };
@@ -258,5 +283,6 @@ function loop() {
 }
 
 requestAnimationFrame(loop);
+/*стилізація тіні курсора*/
 
 
