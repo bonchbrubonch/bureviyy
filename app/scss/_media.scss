@@ -106,9 +106,8 @@
     top: 84px;
     right: 0;
     bottom: 0;
-    left: auto;
-    max-width: 100%;
-    width: 100%;
+    left: -15px;
+    width: calc(100% + 30px);
     height: 100vh;
     z-index: 99;
     display: flex;
