@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body class="page-contacts">
   <div class="wrapper">
     <div class="content">
       <header class="header">
@@ -96,6 +96,10 @@
           </div>
         </div>
       </header>
+
+      <div id="cursor">
+        <div class="cursor--inner"></div>
+      </div>
 
       <div class="container">
         <div class="breadcrumbs">
@@ -207,9 +211,10 @@
             <div class="contacts__right element-animation">
               <div class="form">
                 <div class="form__md-wrap">
-                  <div class="form__inpur-wrap">
+                  <div class="form__inpur-wrap error">
                     <span>Name</span>
                     <input type="text" placeholder="Name" required>
+                    <span>Error</span>
                   </div>
                   <div class="form__inpur-wrap">
                     <span>E-mail</span>

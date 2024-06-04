@@ -256,7 +256,7 @@
   }
 
   .category-list {
-    padding: 80px 20px 40px 15px;
+    padding: 20px 20px 40px 15px;
     position: fixed;
     top: 84px;
     left: 0;
@@ -529,26 +529,6 @@
     overflow: hidden;
   }
 
-  .about__inner {
-    position: relative;
-  }
-
-  .about__img {
-    position: absolute;
-    top: 0;
-    right: -15px;
-    bottom: 0;
-    left: -15px;
-    width: calc(100% + 30px);
-    height: 100%;
-    margin: 0;
-    opacity: .2;
-  }
-
-  .about__content {
-    position: relative;
-    z-index: 1;
-  }
 
   .excellence ul li h6 {
     margin: 0 0 10px 0;
@@ -681,12 +661,6 @@
     width: calc(100% - 25px);
     margin: 0 0 15px 25px !important;
   }
-
-  .contacts__list>li {
-    width: calc(100% - 25px);
-    padding: 15px;
-  }
-
   .form__inpur-wrap {
     margin: 0 0 15px 0 !important;
   }
@@ -722,7 +696,15 @@
     padding: 60px 20px;
   }
 
+  .about__inner {
+    flex-direction: column;
+  }
 
+  .about__img {
+    max-width: calc(100% + 30px);
+    margin: 0 0 0 -15px;
+    width: calc(100% + 30px);
+  }
 
 
 
@@ -805,5 +787,12 @@
 
   .cabinet__adress-col {
     margin: 0 0 15px 20px;
+  }
+  .contacts__list>li {
+    width: calc(100% - 25px);
+    padding: 15px;
+  }
+  .catalog__slider{
+    margin: -50px 0 0 0;
   }
 }

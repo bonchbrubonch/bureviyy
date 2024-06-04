@@ -1,12 +1,12 @@
 $(function () {
   $(".region").select2({
-    minimumResultsForSearch: -1
+    // minimumResultsForSearch: -1
   });
   $(".city").select2({
-    minimumResultsForSearch: -1
+    // minimumResultsForSearch: -1
   });
   $(".department").select2({
-    minimumResultsForSearch: -1
+    // minimumResultsForSearch: -1
   });
 
 });
@@ -61,20 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-/*кнопка показати більше на головній сторінці*/
-document.addEventListener("DOMContentLoaded", function () {
-  const showButtons = document.querySelectorAll(".talk__show");
-
-  showButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const talkText = button.previousElementSibling;
-      if (talkText && talkText.classList.contains("talk__text")) {
-        talkText.classList.toggle("open");
-      }
-    });
-  });
-});
 
 /*фільр*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -186,10 +172,13 @@ var swiper = new Swiper(".intro__slider", {
 var swiper = new Swiper(".catalog__slider", {
   spaceBetween: 30,
   slidesPerView: 1,
-  // autoplay: {
-  //   delay: 7000,
-  //   disableOnInteraction: false,
-  // },
+  centeredSlides: true,
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
