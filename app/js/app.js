@@ -1,12 +1,9 @@
 $(function () {
   $(".region").select2({
-    // minimumResultsForSearch: -1
   });
   $(".city").select2({
-    // minimumResultsForSearch: -1
   });
   $(".department").select2({
-    // minimumResultsForSearch: -1
   });
 
 });
@@ -118,8 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-/*иеню особистого кабінету*/
+/*меню особистого кабінету*/
 document.addEventListener("DOMContentLoaded", function() {
   const cabinetBtn = document.querySelector(".cabinet__btn");
   const cabinetLeft = document.querySelector(".cabinet__left");
@@ -136,6 +132,29 @@ document.addEventListener("DOMContentLoaded", function() {
       body.classList.remove("lock");
   });
 });
+
+/*кнопки фільру за кольором та розміром товару на сторінці product*/
+document.addEventListener("DOMContentLoaded", function() {
+  function addActiveClass(selector) {
+    const links = document.querySelectorAll(selector);
+
+    links.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        links.forEach(function(item) {
+          item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+      });
+    });
+  }
+
+  addActiveClass(".product__size a");
+  addActiveClass(".product__color a");
+});
+
 
 
 /*start animation========*/

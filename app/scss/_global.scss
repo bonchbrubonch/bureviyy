@@ -47,6 +47,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: rgba(225, 222, 219, 1);
   letter-spacing: 1px;
+  // background-color: red;;
 }
 
 body.lock {
@@ -182,8 +183,9 @@ body.lock {
     justify-content: flex-start;
   }
 
-  li {
-    button {
+  li:first-child,
+  li:last-child {
+    a {
       position: relative;
       background-color: transparent;
       border: none;
@@ -211,20 +213,18 @@ body.lock {
         object-fit: contain;
       }
     }
-
-    &+li {
-      margin-left: 15px;
-    }
   }
-
+  li+li {
+    margin-left: 15px;
+  }
   li:first-child {
     transform: rotate(180deg);
   }
 
   .end {
-    button {
+    a {
       opacity: .7;
-
+      pointer-events: none;
       &::after {
         display: none;
       }
