@@ -32,6 +32,22 @@
               <img src="images/dest/icons/logo.svg" alt="logo">
             </a>
             <nav class="header__menu">
+              <div class="header__menu-top">
+                <div class="header__search">
+                  <button class="header__search-resalt">
+                    <img src="images/dest/icons/search.svg" alt="search">
+                  </button>
+                  <input type="text" placeholder="Search">
+                </div>
+                <a href="#" class="header__user header__user--cabinet">
+                  <img src="images/dest/icons/user.svg" alt="icon">
+                  JD
+                </a>
+                <a href="#" class="header__heart">
+                  <img src="images/dest/icons/heart.svg" alt="icon">
+                  <span>5</span>
+                </a>
+              </div>
               <ul>
                 <li>
                   <a href="#">
@@ -51,6 +67,23 @@
                 <li>
                   <a href="#">
                     Contacts
+                  </a>
+                </li>
+              </ul>
+              <ul class="social"> 
+                <li>
+                  <a href="#" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="images/dest/icons/inst.svg" alt="icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="images/dest/icons/tiktok.svg" alt="icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="images/dest/icons/fb.svg" alt="icon">
                   </a>
                 </li>
               </ul>
@@ -97,6 +130,10 @@
         </div>
       </header>
 
+      <div id="cursor">
+        <div class="cursor--inner"></div>
+      </div>
+
       <div class="container">
         <div class="breadcrumbs">
           <div class="breadcrumbs__inner element-animation">
@@ -120,9 +157,10 @@
                   <span>1.</span>
                   Contacts
                 </h5>
-                <div class="form__inpur-wrap element-animation">
+                <div class="form__inpur-wrap element-animation error">
                   <span>First and last name</span>
                   <input type="text" placeholder="First and last name" required>
+                  <span>Error</span>
                 </div>
                 <div class="form__inpur-wrap element-animation">
                   <span>Phone</span>
