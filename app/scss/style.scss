@@ -452,11 +452,12 @@
 /*start catalog============*/
 .catalog {
   padding: 125px 0 140px;
-  background-size: cover;
-  background-position: top center;
+  background-size: contain;
+  background-position: top left;
   background-repeat: no-repeat;
   overflow: hidden;
-
+  position: relative;
+  z-index: 2;
   .title {
     color: #1A1A1A;
     border-bottom: 1px solid rgba(26, 26, 26, 0.5);
@@ -530,6 +531,7 @@
 .category-item {
   display: block;
   position: relative;
+  z-index: 100;
   height: 670px;
   border-radius: 4px;
   overflow: hidden;
@@ -1643,7 +1645,7 @@
       top: auto;
       width: 45px;
       height: 45px;
-      bottom: 0;
+      bottom: 2px;
 
       &::before {
         content: "";

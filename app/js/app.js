@@ -81,21 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  const filterBtn = document.querySelector(".filter__btn");
   const categoryList = document.querySelector(".category-list");
-  const categoryListClose = document.querySelector(".category-list__close");
-  const body = document.body;
 
-  filterBtn.addEventListener("click", function() {
+  if (categoryList) {
+    const filterBtn = document.querySelector(".filter__btn");
+    const categoryListClose = document.querySelector(".category-list__close");
+    const body = document.body;
+
+    filterBtn.addEventListener("click", function() {
       categoryList.classList.add("open");
       body.classList.add("lock");
-  });
+    });
 
-  categoryListClose.addEventListener("click", function() {
+    categoryListClose.addEventListener("click", function() {
       categoryList.classList.remove("open");
       body.classList.remove("lock");
-  });
+    });
+  }
 });
+
 
 /*додавання товарy до обраного*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -117,21 +121,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*меню особистого кабінету*/
 document.addEventListener("DOMContentLoaded", function() {
-  const cabinetBtn = document.querySelector(".cabinet__btn");
-  const cabinetLeft = document.querySelector(".cabinet__left");
-  const cabinetClose = document.querySelector(".cabinet__close");
-  const body = document.body;
+  const cabinet = document.querySelector(".cabinet");
 
-  cabinetBtn.addEventListener("click", function() {
+  if (cabinet) {
+    const cabinetBtn = document.querySelector(".cabinet__btn");
+    const cabinetLeft = document.querySelector(".cabinet__left");
+    const cabinetClose = document.querySelector(".cabinet__close");
+    const body = document.body;
+
+    cabinetBtn.addEventListener("click", function() {
       cabinetLeft.classList.add("open");
       body.classList.add("lock");
-  });
+    });
 
-  cabinetClose.addEventListener("click", function() {
+    cabinetClose.addEventListener("click", function() {
       cabinetLeft.classList.remove("open");
       body.classList.remove("lock");
-  });
+    });
+  }
 });
+
 
 /*кнопки фільру за кольором та розміром товару на сторінці product*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -182,6 +191,10 @@ for (let elm of elements) {
 var swiper = new Swiper(".intro__slider", {
   spaceBetween: 30,
   effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -194,10 +207,7 @@ var swiper = new Swiper(".catalog__slider", {
   centeredSlides: true,
   loop: true,
   speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
