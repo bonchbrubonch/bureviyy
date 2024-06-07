@@ -12,6 +12,7 @@
   right: 0;
   width: 100%;
   z-index: 100;
+  z-index: 100;
 
   &__inner {
     display: flex;
@@ -534,7 +535,7 @@
 .category-item {
   display: block;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   height: 670px;
   border-radius: 4px;
   overflow: hidden;
