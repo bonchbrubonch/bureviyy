@@ -1601,7 +1601,11 @@
       }
     }
   }
-
+  &__right.auto-height{
+    .slick-list{
+      height: fit-content !important;
+    }
+  }
   &__slider {
     position: relative;
     padding: 0 0 0 15px;
