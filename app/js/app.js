@@ -1,9 +1,14 @@
 $(function () {
-  $(".region").select2({
-  });
-  $(".city").select2({
-  });
-  $(".department").select2({
+  $(".region").select2({});
+  $(".city").select2({});
+  $(".department").select2({});
+
+  $('.u-info__slider').slick({
+    slidesToShow: 3,
+    vertical: true,
+    infinite: false,
+    prevArrow: '<button class="slider__arrows left"><svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#fff"></path></svg></button>',
+    nextArrow: '<button class="slider__arrows right"><svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928935C33.9526 0.538411 33.3195 0.538411 32.9289 0.928935C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-8.74228e-08 9L40 9L40 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#fff"></path></svg></button>',
   });
 
 });
@@ -40,20 +45,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const headerSearch = document.querySelector(".header__search");
   const headerSearchInput = headerSearch.querySelector("input");
   const headerSearchResalt = document.querySelector(".header__search-resalt");
 
-  document.addEventListener("click", function(event) {
+  document.addEventListener("click", function (event) {
     if (!headerSearch.contains(event.target) && !headerSearchResalt.contains(event.target)) {
       headerSearch.classList.remove("active");
     }
   });
-  headerSearch.addEventListener("click", function(event) {
+  headerSearch.addEventListener("click", function (event) {
     event.stopPropagation();
   });
-  headerSearchResalt.addEventListener("click", function(event) {
+  headerSearchResalt.addEventListener("click", function (event) {
     event.stopPropagation();
   });
 });
@@ -80,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const categoryList = document.querySelector(".category-list");
 
   if (categoryList) {
@@ -88,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const categoryListClose = document.querySelector(".category-list__close");
     const body = document.body;
 
-    filterBtn.addEventListener("click", function() {
+    filterBtn.addEventListener("click", function () {
       categoryList.classList.add("open");
       body.classList.add("lock");
     });
 
-    categoryListClose.addEventListener("click", function() {
+    categoryListClose.addEventListener("click", function () {
       categoryList.classList.remove("open");
       body.classList.remove("lock");
     });
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /*меню особистого кабінету*/
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const cabinet = document.querySelector(".cabinet");
 
   if (cabinet) {
@@ -129,12 +134,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const cabinetClose = document.querySelector(".cabinet__close");
     const body = document.body;
 
-    cabinetBtn.addEventListener("click", function() {
+    cabinetBtn.addEventListener("click", function () {
       cabinetLeft.classList.add("open");
       body.classList.add("lock");
     });
 
-    cabinetClose.addEventListener("click", function() {
+    cabinetClose.addEventListener("click", function () {
       cabinetLeft.classList.remove("open");
       body.classList.remove("lock");
     });
@@ -143,15 +148,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /*кнопки фільру за кольором та розміром товару на сторінці product*/
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   function addActiveClass(selector) {
     const links = document.querySelectorAll(selector);
 
-    links.forEach(function(link) {
-      link.addEventListener("click", function(event) {
+    links.forEach(function (link) {
+      link.addEventListener("click", function (event) {
         event.preventDefault();
 
-        links.forEach(function(item) {
+        links.forEach(function (item) {
           item.classList.remove("active");
         });
 
@@ -261,25 +266,29 @@ var swiper2 = new Swiper(".product__slider", {
   },
 });
 
-var swiper = new Swiper(".u-info__slider", {
-  slidesPerView: 3,
-  // freeMode: true,
-  // watchSlidesProgress: true,
-  direction: "vertical",
-  loop: true,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
+// var swiper = new Swiper(".u-info__slider", {
+//   slidesPerView: 3,
+//   direction: "vertical",
+//   loop: true,
+//   spaceBetween: 20,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   },
 
-});
+// });
 
 
 /*стилізація тіні курсора*/
 const cursor = document.querySelector('#cursor');
-let mouse = { x: 300, y: 300 };
-let pos = { x: 0, y: 0 };
+let mouse = {
+  x: 300,
+  y: 300
+};
+let pos = {
+  x: 0,
+  y: 0
+};
 const speed = 0.1; // between 0 and 1
 
 const updatePosition = () => {
@@ -304,3 +313,8 @@ requestAnimationFrame(loop);
 /*стилізація тіні курсора*/
 
 
+
+
+if ($('.slick-slider').length > 0){
+  $(".slick-slider").slick("refresh"); $(".slick-slider").slick("setPosition");
+}
