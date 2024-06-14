@@ -843,6 +843,11 @@
 
 @media (max-width: 576px) {
 
+  .catalog .swiper-button-next,
+  .catalog .swiper-button-prev {
+    top: -50px;
+  }
+
   .header__user,
   .header__heart,
   .header__basket {

@@ -20,7 +20,34 @@ $(function () {
     }
   });
   
-
+  $(document).ready(function() {
+    const $searchElement = $(".header__search");
+    const $searchButton = $(".header__search-btn");
+    const $searchResult = $(".header__search-resalt");
+  
+    $searchButton.on("click", function() {
+      $searchElement.toggleClass("active");
+    });
+  
+    $searchResult.on("click", function() {
+      $searchElement.removeClass("active");
+    });
+  
+    $(document).on("click", function(event) {
+      if (!$searchElement.is(event.target) && !$searchResult.is(event.target) && $searchElement.has(event.target).length === 0 && $searchResult.has(event.target).length === 0) {
+        $searchElement.removeClass("active");
+      }
+    });
+  
+    $searchElement.on("click", function(event) {
+      event.stopPropagation();
+    });
+  
+    $searchResult.on("click", function(event) {
+      event.stopPropagation();
+    });
+  });
+  
 });
 
 /*меню гамбургер*/
@@ -37,39 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     title.addEventListener("click", function () {
       this.classList.toggle("active");
     });
-  });
-});
-
-/*пошук в шапці*/
-document.addEventListener("DOMContentLoaded", function () {
-  const searchElement = document.querySelector(".header__search");
-  const searchButton = document.querySelector(".header__search-btn");
-  const searchResult = document.querySelector(".header__search-resalt");
-
-  searchButton.addEventListener("click", function () {
-    searchElement.classList.toggle("active");
-  });
-
-  searchResult.addEventListener("click", function () {
-    searchElement.classList.remove("active");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const headerSearch = document.querySelector(".header__search");
-  const headerSearchInput = headerSearch.querySelector("input");
-  const headerSearchResalt = document.querySelector(".header__search-resalt");
-
-  document.addEventListener("click", function (event) {
-    if (!headerSearch.contains(event.target) && !headerSearchResalt.contains(event.target)) {
-      headerSearch.classList.remove("active");
-    }
-  });
-  headerSearch.addEventListener("click", function (event) {
-    event.stopPropagation();
-  });
-  headerSearchResalt.addEventListener("click", function (event) {
-    event.stopPropagation();
   });
 });
 
